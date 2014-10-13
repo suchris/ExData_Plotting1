@@ -2,7 +2,7 @@
 df <- read.csv("./household_power_consumption.txt", sep = ";", na.strings = "?")
 
 ## select two days in the data set, date format dd/mm/yyyy
-dates <- seq(dmy("01/02/2007"), dmy("02/02/2007"), 86400)
+dates <- c("01/02/2007", "02/02/2007")
 
 ## sort data frame df first
 filtered_df = NULL

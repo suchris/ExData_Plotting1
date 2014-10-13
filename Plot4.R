@@ -39,7 +39,7 @@ legend(1780, 40, c("Sub_metering_1","Sub_metering_2", "Sub_metering_3"),
 
 ## plot 4
 plot(df2$Global_reactive_power, col = "black", type = "l", xaxt = "n",
-     ylab = "Global_active_power", xlab = "datetime")
+     ylab = "Global_reactive_power", xlab = "datetime")
 axis(side = 1, c("Thu","Fri","Sat"), at = c(1,length(df2$WeekDay)/2, length(df2$WeekDay)))
 
 ## save to png file

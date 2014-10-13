@@ -13,13 +13,14 @@ filtered_df <- rbind(filtered_df, df[as.Date(df$Date, format="%d/%m/%Y") == as.D
 df2 <- transform(filtered_df, WeekDay = weekdays(as.Date(Date,format("%d/%m/%Y"))))
 
 ## line plot
+plot.new()
 plot(df2$Sub_metering_1, col = "black", type = "l", xaxt = "n",
      ylab = "Global Active Power (killowwatts)", xlab = "")
 axis(side = 1, c("Thu","Fri","Sat"), at = c(1,length(df2$WeekDay)/2, length(df2$WeekDay)))
 lines(df2$Sub_metering_2, col = "red")
 lines(df2$Sub_metering_3, col = "blue")
 
-legend(1780, 40, c("Sub_metering_1","Sub_metering_2", "Sub_metering_3"), 
+legend(1700, 40, c("Sub_metering_1","Sub_metering_2", "Sub_metering_3"), 
        lty = c(1,1,1), lwd = c(1, 1, 1), 
        col = c("black", "red", "blue"))
 
